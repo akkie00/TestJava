@@ -13,6 +13,10 @@ public class First {
 		System.out.println("enter 2nd number: ");
 		double num2 = sc.nextDouble();
 		System.out.println("Addition: "+(num1+num2));
+		System.out.println("Subtraction: "+(num1-num2));
+		System.out.println("Multiplication: "+(num1*num2));
+		System.out.println("Division: "+(num1/num2));
+		sc.close();
 	}
 
 }
