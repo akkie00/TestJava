@@ -1,21 +1,22 @@
 package firstDemo;
 
-import java.util.Scanner;
-
 public class Second {
 
-	public static void main(String[] args) {
+
 		// TODO Auto-generated method stub
 		
-		Scanner sc = new Scanner(System.in);
-//		sc.hasNextDouble();
-		System.out.println("enter num1 & num2 : "+sc.hasNextDouble()+""+sc.hasNextDouble());
+		public double num1, num2;
 		
-		if(sc.hasNextDouble())
-			System.out.println("yes");
-		else
-			System.out.println("error");
-		sc.close();
+		Second(double num1, double num2){
+			this.num1 = num1;
+			this.num2 = num2;
+		}
+		
+		double getAddition() {
+			return 	num1 + num2; 
+		}
+		double getAverage() {
+			return ((num1 + num2)/2);
+		}
 	}
 
-}
