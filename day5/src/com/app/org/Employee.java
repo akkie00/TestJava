@@ -16,16 +16,34 @@ public class Employee {
 		
 	}
 	//explicitly implementing default constructor
-	public Employee() {
-		
-	}
-	
+	/*
+	 * public Employee() {
+	 * 
+	 * }
+	 */
 	//getting employee details
-	public void getEmpDetails() {
-		System.out.println("id: "+id+"name: "+name+"Dept ID: "+deptID+"basicSal: "+basicSal);
+	public String getDetails() {
+		
+		return "id: "+id+"name: "+name+"Dept ID: "+deptID+"basicSal: "+basicSal;
 	}
 	
+	// method for computing net salary
 	public double computeNetSalary() {
 		return 0;
 	}
+	
+	//getter for ID
+	public int getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getDeptID() {
+		return deptID;
+	}
+	public double getBasicSal() {
+		return basicSal;
+	}
+	
 }
