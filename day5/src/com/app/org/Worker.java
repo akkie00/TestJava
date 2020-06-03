@@ -2,17 +2,17 @@ package com.app.org;
 
 public class Worker extends Employee{
 	
-	private double hoursWorked, hourlyRate;
+	private int hoursWorked, hourlyRate;
 	
-	public Worker(int id, String name, int deptID, double basicSal) {
+	public Worker(int id, String name, int deptID, double basicSal, int hoursWorked, int hourlyRate) {
 		super(id, name, deptID, basicSal);
 		this.hourlyRate = hourlyRate;
 		this.hoursWorked = hoursWorked;
 	}
 
 	public String getDetails() {
-	 return	"Manger details: "+"id "+super.getId()+"name "+super.getName()+"DeptID "+super.getDeptID()
-	 ;
+	 return	"Worker details: "+"id "+super.getId()+"name "+super.getName()+"DeptID "+super.getDeptID()
+	 +"Hrs worked: "+hoursWorked+"Hrly Rate: "+hourlyRate;
 	}
 	
 	@Override
@@ -20,8 +20,12 @@ public class Worker extends Employee{
 		return getBasicSal()+(hourlyRate+hoursWorked);
 	}
 	
-	public double getHourlyRate() {
+	public int getHourlyRate() {
 		return hourlyRate;
+	}
+	
+	public int getHoursWorked() {
+		return hoursWorked;
 	}
 	
 	

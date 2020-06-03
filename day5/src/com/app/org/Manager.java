@@ -19,6 +19,7 @@ public class Manager extends Employee {
 	@Override
 	public double computeNetSalary() {
 		return (getBasicSal()+perfBonus);
+//		return ;
 	}
 	
 	public double getPerfBonus() {
