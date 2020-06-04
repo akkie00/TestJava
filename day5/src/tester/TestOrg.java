@@ -59,31 +59,48 @@ public class TestOrg {
 		while (!exit) {
 //			System.out.println("here" + emp.length);
 			System.out.println("Choose your option: ");
-			System.out.println("Option 1: Hire Manager or Option 2: Hire Worker");
+			System.out.println("Option 1: Hire Manager |  Option 2: Hire Worker | Option 3: Display hire details | Option 4: Exit");
 			switch (sc.nextInt()) {
 			case 1:
 				System.out.println("Enter manager details: ");
 				if (counter < emp.length) {
-					emp[counter++] = new Manager(sc.nextInt(), sc.nextLine(), sc.nextDouble(), sc.nextInt(),
+					emp[counter++] = new Manager(sc.nextInt(), sc.next(), sc.nextDouble(), sc.nextInt(),
 							sc.nextDouble());
+				}
+				else {
+					System.out.println("Please select number of hires again!");
 				}
 
 				break;
 			case 2:
 				System.out.println("Enter worker details: ");
 				if(counter < emp.length) {
-					System.out.println("details of worker: ");
+//					System.out.println("details of worker: ");
+					emp[counter++] = new Worker(sc.nextInt(), sc.next(), sc.nextInt(), sc.nextDouble(),sc.nextInt(), sc.nextInt());
 				}
-
+				else {
+					System.out.println("Please select number of hires again!");
+				}
 				break;
-
-				
+			
 			case 3:
+				for(Employee e: emp) {
+//					System.out.println(e);
+//					System.out.println(e.computeNetSalary());
+					if(e!=null) {
+						System.out.println("Employee details: ");
+						System.out.println(e.getDetails());
+					}
+				}
+				
+				break;
+			
+			case 4:
 				exit = true;
 				break;
 			}
 		}
-//		System.out.println("here, here");
+		System.out.println("here, here");
 		sc.close();
 	}
 
