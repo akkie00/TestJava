@@ -16,5 +16,7 @@ public class TestOrg {
 		System.out.println(mgr.equals(mgr2));
 		
 //		System.out.println((mgr2.getName()).equals(mgr.getName()));
+		System.out.println(mgr.computeNetSalary());
+		System.out.println(work.computeNetSalary());
 	}
 }

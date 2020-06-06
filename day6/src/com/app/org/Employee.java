@@ -5,62 +5,68 @@ public abstract class Employee {
 	private String name;
 	private int deptID;
 	private double basicSal;
-	
-	//parameterized constructor
+
+	// parameterized constructor
 	public Employee(int id, String name, int deptID, double basicSal) {
-	
+
 		this.id = id;
 		this.name = name;
 		this.deptID = deptID;
 		this.basicSal = basicSal;
-		
+
 	}
-	//explicitly implementing default constructor
+	// explicitly implementing default constructor
 	/*
 	 * public Employee() {
 	 * 
 	 * }
 	 */
-	//getting employee details
-	
+	// getting employee details
 
 	/*
 	 * public String getDetails() {
 	 * 
 	 * return "id: "+id+"name: "+name+"Dept ID: "+deptID+"basicSal: "+basicSal; }
 	 */
-	
-	//overridden toString() methodd
+
+	// overridden toString() methodd
 	@Override
 	public String toString() {
-		return id+" "+name+" "+deptID+" "+basicSal;
+		return id + " " + name + " " + deptID + " " + basicSal;
 	}
-	
+
 	@Override
 	public boolean equals(Object o) {
 		System.out.println("inside emp equals");
-		if(this.id == ((Employee)o).id && this.name == ((Employee)o).name){
-			return true;
-		}
-		
+		if (o instanceof Employee)
+			//String is a reference type of a variable, if we use "==" to compare it'll compare address of two strings
+			//String class already overridden equals method to replace ref equality to content equality.
+			if (this.id == ((Employee) o).id && this.name.equals(((Employee) o).name)) {
+				return true;
+			}
+
 		return false;
 	}
-	
+
 	// method for computing net salary
 	public abstract double computeNetSalary();
 	
-	//getter for ID
+	
+	// getter for ID
 	public int getId() {
 		return id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public int getDeptID() {
 		return deptID;
 	}
+
 	public double getBasicSal() {
 		return basicSal;
 	}
-	
+
 }
