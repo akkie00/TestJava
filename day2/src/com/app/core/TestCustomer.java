@@ -23,8 +23,7 @@ public class TestCustomer {
 		System.out.println(cust3.getDetails());
 		
 		System.out.println(cust.getCreditLimit()+1000);
-		System.out.println(cust.getDetails()
-				);
+		System.out.println(cust.getDetails());
 		sc.close();
 	}
 
